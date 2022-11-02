@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>Asistance Control by robadoradeperlitas</h1>
+      <h2> Diamond Stalker</h2>
     </div>
   );
 }
