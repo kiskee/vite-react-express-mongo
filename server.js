@@ -18,11 +18,6 @@ app.get('/', (req, res) => {
     res.end('welcomer to the backend server')
 })
 
-
-app.get("/api", (req, res) => {
-    res.send("Acaaaaaaaaaaaaaaaaaaaaa");
-  });
-
 //Server config
 app.listen(5000, function(){
     console.log('The NODE server is running ok')

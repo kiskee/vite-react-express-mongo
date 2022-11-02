@@ -4,7 +4,6 @@ import "./App.css";
 import axios from 'axios'
 
 function App() {
-  const [count, setCount] = useState(0);
   const urlWithProxy = "/api/usuario/obtenerusuarios";
 
   function getDataFromServer() {
