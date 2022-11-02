@@ -1,6 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import "./App.css";
+import Login from "./css/Login.module.css";
 import axios from 'axios'
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
   console.log(getDataFromServer());
 
   return (
-    <div className="App">
-      <h1>Asistance Control by robadoradeperlitas</h1>
+    <div>
+      <h1 className={Login.Title}>Asistance Control by robadoradeperlitas</h1>
       <h2> Diamond Stalker</h2>
     </div>
   );
