@@ -1,3 +1,5 @@
+
+
 *{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -9,18 +11,37 @@
 }
 
 
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
 
-.sasMainAction{
-    background-color: #DC3E35;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 50px;
-    outline: none;
-    cursor: pointer;
-    margin: 30px 0px;
+body {
+    min-height: calc(100vh)
+}
+
+.main-menu-holder {
+    padding: 20px;
+}
+
+.main-footer {
+    padding: 20px 10px;
+    color: #888;
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.mainWrap {
+    min-height: calc(100vh - 140px);
+}
+
+.main-menu-logo {
+    width: 100px;
+    position: relative;
+    left: -5px;
 }
 
 
@@ -33,3 +54,405 @@ h1{
     color: bisque;
 }
 
+input[type=text],
+input[type=password],
+input[type=email] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.sasTitle {
+    padding-top: 100px;
+}
+
+.mainWrap {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sasInputHolder {
+    margin: 30px 0px;
+}
+
+.sasTitle {
+    font-size: 20px;
+}
+
+.sasMessage {
+}
+
+.sasInputLabel{
+    padding: 0 0 0 20px;
+}
+
+.sasInput {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #F6F6F9;
+    padding: 10px 10px 10px 45px;
+    border-radius: 30px;;
+    background-color: #F6F6F9;
+    outline: none;
+}
+
+.sasInput:focus {
+    border: 2px solid #661D72;
+}
+
+.sasInputText {
+    position: relative;
+}
+
+.sasInputIcon {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.sasMainAction {
+    background-color: #DC3E35;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    margin: 30px 0px
+}
+
+.sasMainAction:hover {
+    filter: brightness(110%);
+}
+
+.sasMainAction:active {
+    filter: brightness(100%);
+}
+
+.sasMessageAlert {
+    background-color: #F0E9F1;
+    color: #661D72;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.sasMessageAlert:empty {
+    display: none;
+}
+
+.sasLink {
+    color: #661D72;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer
+}
+
+.sasLink:hover {
+    text-decoration: underline
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.footer__info {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #888;
+    margin-left: 5px;
+}
+
+.main-footer {
+    text-decoration: none
+}
+
+a.main-footer:hover {
+    color: #691F74;
+}
+
+/* New Password Reset page - Login - Create Account classes */
+.l-text--center {
+    text-align: center
+}
+
+.c-sas__title {
+    color: #222222;
+    font-size: 24px;
+    text-align: center;
+    padding: 0 22px;
+}
+
+.c-sas__sub-title {
+    font-size: 13px;
+    line-height: 19px;
+    color: #676767;
+    padding-top: 20px;
+}
+
+.c-sas__sub-title b {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.c-sas__separator {
+    background-color: #ECECEC;
+    height: 1px;
+    margin: 30px 0 30px;
+    width: 100%;
+}
+
+.c-sas__text-small {
+    font-size: 10px;
+    line-height: 15px;
+    color: #676767;
+}
+
+.c-sas__sub-title .sas-link {
+    font-size: 13px;
+}
+
+.l-padding--left-20 {
+    padding: 0 0 0 20px;
+}
+
+.c-sas .sas-input-holder {
+    margin: 20px 0 10px;
+}
+
+.c-sas .sas-input-label {
+    padding: 0 0 0 20px;
+}
+
+.c-sas__main-cta {
+    background-color: #E34B31;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    margin: 30px auto 10px;
+    max-width: 320px;
+    display: block;
+    font-size: 14px;
+}
+
+.c-sas__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.c-sas__input-label {
+    color: #222222;
+    margin-bottom: 8px;
+    display: block;
+    display: -webkit-box;
+    margin-left: 19px;
+    margin-right: 19px;
+    font-size: 13px;
+    line-height: 14px;
+}
+
+.c-sas__input-label + .sas-input-text .sas-input {
+    padding-left: 30px;
+}
+
+.l-link--alignment {
+    font-size: 13px;
+    padding: 0 20px 0 0;
+    position: relative;
+    top: 8px;
+}
+
+.c-sas__footer-container .footer__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    color: #888;
+}
+
+.sas-btn--visibility-off {
+    background-image: url(https://cdn-dynamic.talent.com/ajax/img/get-svg.php?icon=invisible_icon&size=20&color=661D72);
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sas-btn--visibility-on {
+    background-image: url(https://cdn-dynamic.talent.com/ajax/img/get-svg.php?icon=visible_icon&size=20&color=676767);
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    cursor: pointer;
+}
+
+/* Checkbox element */
+.input__holder {
+    padding: 10px 5px 5px 5px;
+}
+
+.checkbox__label {
+    display: block;
+    font-size: 13px;
+    position: relative;
+    padding: 0 0 0 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+    color: #222222;
+    line-height: 27px;
+}
+
+.checkbox__label input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.input__checkMark {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 2px solid #C4C4C4;
+    border-radius: 4px;
+}
+
+.input__checkMark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox__label:hover input ~ .input__checkMark {
+    background-color: #fff;
+}
+
+.checkbox__label input:checked ~ .input__checkMark {
+    background-color: #691F74;
+    border: 2px solid #691F74;
+}
+
+.checkbox__label input:checked ~ .input__checkMark:after {
+    display: block;
+}
+
+.checkbox__label .input__checkMark:after {
+    left: 5px;
+    top: 0;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.c-sas__error {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    color: #EB5757;
+}
+
+.c-sas__error-holder {
+    display: flex;
+    padding: 10px;
+    align-items: baseline;
+}
+
+.c-sas__error-icon {
+    background: #fff;
+    color: #EB5757;
+    border: 1px solid #EB5757;
+    height: 17px;
+    width: 17px;
+    min-width: 17px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+.c-sas__input-error {
+    border: 2px solid #EB5757!important;
+}
+
+.c-body__employers-login {
+    background-color: #F6F6F9;
+}
+
+.c-body__employers-login .main-menu-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 20px 40px 15px;
+}
+
+.c-sas.c-main-wrap {
+    max-width: 540px;
+    max-height: 580px;
+    margin: 60px auto;
+    border-radius: 8px;
+    min-height: calc(100vh - 260px);
+}
+
+.c-login__employer-form {
+    padding: 55px 32px 55px;
+    max-height: 580px;
+    background: #fff;
+}
+
+.c-login__employer-form .sas-input {
+    height: 48px;
+    padding: 0 8px 0 16px;
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: #F6F6F9;
+    border: 2px solid #F6F6F9;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.c-sas__link {
+    height: auto;
+    width: auto;
+    padding: 0;
+    opacity: 1;
+    color: #6E1F78;
+    margin-left: 3px;
+    background: none;
+    text-decoration: underline;
+    font-size: 13px;
+}
