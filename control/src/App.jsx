@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>Asistance Control</h1>
+      <h2>la perra</h2>
     </div>
   );
 }
