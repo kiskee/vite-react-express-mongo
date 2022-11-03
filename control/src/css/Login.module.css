@@ -44,16 +44,6 @@ body {
     left: -5px;
 }
 
-
-
-h1{
-    color:blue;
-}
-
-.Title{
-    color: bisque;
-}
-
 input[type=text],
 input[type=password],
 input[type=email] {

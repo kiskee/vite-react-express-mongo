@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import login from "./css/Login.module.css";
 import axios from "axios";
 import Login from "./components/Login";
-import Prueba from "./components/Prueba";
+import Weekdays from "./components/Weekdays";
 
 function App() {
   const urlWithProxy = "/api/usuario/obtenerusuarios";
@@ -41,7 +41,7 @@ function App() {
       </div>
       {/* ---------------------------- Days of the week ---------------------------- */}
       <div className="daysOfWeek" style={{ display: displayDays }}>
-        <Prueba />
+        <Weekdays/>
       </div>
     </div>
   );
