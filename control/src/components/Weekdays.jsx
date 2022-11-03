@@ -1,4 +1,5 @@
 import React from 'react'
+import Logout from './Logout';
 
 
 const day = [1, 2, 3, 4, 5];
@@ -28,7 +29,7 @@ const day = [1, 2, 3, 4, 5];
 const Prueba = () => {
   return (
     <div>
-
+      <Logout/>
 
       {
         day.forEach(element => {
