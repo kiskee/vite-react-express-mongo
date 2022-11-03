@@ -22,11 +22,11 @@ body {
     min-height: calc(100vh)
 }
 
-.main-menu-holder {
+.mainMenuHolder {
     padding: 20px;
 }
 
-.main-footer {
+.mainFooter {
     padding: 20px 10px;
     color: #888;
     font-size: 12px;
@@ -38,11 +38,13 @@ body {
     min-height: calc(100vh - 140px);
 }
 
-.main-menu-logo {
+.mainMenuLogo {
     width: 100px;
     position: relative;
     left: -5px;
 }
+
+
 
 
 
@@ -163,7 +165,7 @@ input[type="submit"] {
     appearance: none;
 }
 
-.footer__info {
+.footerInfo {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -171,11 +173,11 @@ input[type="submit"] {
     margin-left: 5px;
 }
 
-.main-footer {
+.mainFooter {
     text-decoration: none
 }
 
-a.main-footer:hover {
+a.mainFooter:hover {
     color: #691F74;
 }
 
