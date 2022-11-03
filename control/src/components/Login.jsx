@@ -125,11 +125,11 @@ function Login() {
         </button>
         <div className="sas-help">
         You can create a SAS account if you don't have one already. You can reset your password if your account is locked. 
-            <div >
-                <a className="sas-link">Login</a> · 
-                <a className="sas-link" >Logout</a> · 
-                <a className="sas-link" >Reset password</a> ·
-                <a className="sas-link" >Resend Activation Link</a>
+            <div className={login.linkis}>
+                <a className={login.sasLink}>Login</a> · 
+                <a className={login.sasLink} >Logout</a> · 
+                <a className={login.sasLink} >Reset password</a> ·
+                <a className={login.sasLink} >Resend Activation Link</a>
             </div>  
         </div>
       </div>
@@ -142,7 +142,7 @@ function Login() {
                 <div className="footer__separation">·</div>
                 <a className={login.mainFooter} rel="nofollow" href="/tos">Terms of Service </a>
                 <div className="footer__separation">·</div>
-                <div className="main-footer footer__copy-right">© Talent.com</div>
+                <div className={login.mainFooter}>© Talent.com</div>
             </div>
         </footer>
     </>
