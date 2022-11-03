@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import login from "./css/Login.module.css";
 import axios from "axios";
 import Login from "./components/Login";
-import Weekdays from "./components/Weekdays";
+import Weekdays from "./components/Weekdays"
 
 function App() {
   const urlWithProxy = "/api/usuario/obtenerusuarios";
