@@ -19,7 +19,7 @@ function Login() {
         useremail,
       });
       if (useri[0].password === md5(password)) {
-        window.sessionStorage.setItem("Logged", "true");
+        window.sessionStorage.setItem("Logged",useremail);
         window.location.reload();
       }
     } catch (e) {

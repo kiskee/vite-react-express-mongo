@@ -11,6 +11,14 @@ const eschemaUSer = new eschema({
     id: String
 })
 
+const eschemaDays = new eschema(
+    {date: String,
+    userList: Array
+}
+)
+
+const daysModel = mongoose.model('days', eschemaDays)
+
 const UserModel = mongoose.model('users', eschemaUSer)
 module.exports = router
 
@@ -92,6 +100,16 @@ router.post('/borrarusuario', (req, res) => {
 
 router.post('/logi', (req, res) => {
     UserModel.find({email:req.body.useremail}, function(docs, err){
+        if(!err){
+            res.send(docs)
+        }else{
+            res.send(err)
+        }
+    })
+})
+
+router.post('/days',(req,res)=>{
+    daysModel.find({}, function(docs, err){
         if(!err){
             res.send(docs)
         }else{

@@ -1,5 +1,7 @@
 import React from 'react'
 import Logout from './Logout';
+import style from '../css/Weekdays.module.css'
+
 
 
 const day = [1, 2, 3, 4, 5];
@@ -30,7 +32,6 @@ const Prueba = () => {
   return (
     <div>
       <Logout/>
-
       {
         day.forEach(element => {
           console.log(element)
