@@ -17,7 +17,12 @@ const DayContainer = ({ day , number}) => {
             </center>
             <img src={Img} className={style.img}/>
             <div className={style.container}>
-                <p>Architect & Engineer</p>
+                
+                <div >
+                    <center className={style.oval} >
+0/0
+                    </center>
+                </div>
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import React from "react";
 import Logout from "./Logout";
 import DayContainer from "./DayContainer"
 import style from '../css/Day.module.css'
+import axios from "axios";
 
 /**
  * @returns Return on the first Monday of the week
@@ -66,6 +67,16 @@ if (cookiesDaysoftheWeek.length == 0) {
       day.push(new Date(temp).toLocaleDateString());
     });
 }
+prueba()
+
+async function prueba(){
+  let res = await axios.post("api/usuario/days");
+  const data = res.data;
+  console.log(data)
+
+}
+
+
 
 const Weekdays = () => {
   return (
