@@ -1,44 +1,86 @@
-import React from 'react'
-import Logout from './Logout';
+import React from "react";
+import Logout from "./Logout";
+import DayContainer from "./DayContainer"
+import style from '../css/Day.module.css'
 
+/**
+ * @returns Return on the first Monday of the week
+ */
 
-const day = [1, 2, 3, 4, 5];
+const FirstMondayoftheWeek = () => {
+  var dateCurrent = new Date();
 
+  let daytoSubtract = dateCurrent.getUTCDay();
+  let day;
+  if (daytoSubtract == 0) {
+    day = -6;
+  } else {
+    day = (daytoSubtract - 1) * -1;
+  }
 
+  dateCurrent.setDate(dateCurrent.getDate() + day);
 
-// var date = new Date('11/02/2022');
-// var primerDia = new Date(date.getFullYear(), 1);//Primer dia del mes;
-// var ultimoDia = new Date(date.getFullYear(), date.getMonth() + 1, 0);//Ultimo dia del mes
+  return dateCurrent;
+};
 
-// console.log(primerDia);
-// console.log(ultimoDia);
+/**
+ * @returns Returns an array with each of the dates of the day of the week.
+ */
+const calculateDays = () => {
+  let date = FirstMondayoftheWeek();
 
-// diapararestar=primerDia.getUTCDay();
-// if(diapararestar==0){
-//     dias1=(-6);        
-// }else{
-//     dias1=(diapararestar-1)*(-1);        
-// }
+  // console.log(' ⟢ ⊱⊱ ⟢ ')
+  // date = date.getTime() + 86400000
+  // console.log(new Date(date))
 
-// primerDia.setDate(primerDia.getDate() + dias1);
-// console.log("Lunes de la semana:");
-// console.log(primerDia);
+  let days = [];
 
+  for (let i = 1; i < 6; i++) {
+    let tempdate = date.getTime() + 86400000 * i;
+    days.push(new Date(tempdate));
+  }
+  return days;
+};
 
+let cookiesDaysoftheWeek = document.cookie
+  .split(";")
+  .filter((x) => x.search("Days of the week") > -1);
 
-const Prueba = () => {
-  return (
-    <div>
-      <Logout/>
+let day = [];
+if (cookiesDaysoftheWeek.length == 0) {
+  // As the cookies were not found; a new cookie is created and expires every Friday.
 
-      {
-        day.forEach(element => {
-          console.log(element)
-        })
-      }
+  var date = new Date();
+  date.setDate(date.getDate() + 8);
+  date.setHours(14, 0, 0);
 
-    </div>
-  )
+  let days = calculateDays();
+  document.cookie =
+    "Days of the week" + "=" + days + "; expires=" + date + "; path=/";
+} else {
+  cookiesDaysoftheWeek[0]
+    .split("=")
+    .pop()
+    .split(",")
+    .forEach((temp) => {
+      day.push(new Date(temp).toLocaleDateString());
+    });
 }
 
-export default Prueba
+const Weekdays = () => {
+  return (
+    <div>
+      <Logout />
+
+     {
+      day.map((element,index) => (
+        <div key={element} style={{backgroundColor:"red"}}>
+          <DayContainer day={element} number={index}/>
+        </div>
+      ))
+     }
+    </div>
+  );
+};
+
+export default Weekdays;
