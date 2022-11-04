@@ -4,7 +4,7 @@ import style from "../css/Day.module.css";
 const DayContainer = ({ day , number}) => {
 
 
-    let Img = `../../public/Day_${number+1}.png`
+    let Img = `../../Day_${number+1}.png`
 
 
 

@@ -8,8 +8,9 @@ import axios from "axios";
  * @returns Return on the first Monday of the week
  */
 
-const FirstMondayoftheWeek = () => {
-  var dateCurrent = new Date();
+const FirstMondayoftheWeek = (dateEnter) => {
+
+  var dateCurrent = new Date(dateEnter);
 
   let daytoSubtract = dateCurrent.getUTCDay();
   let day;
@@ -19,7 +20,7 @@ const FirstMondayoftheWeek = () => {
     day = (daytoSubtract - 1) * -1;
   }
 
-  dateCurrent.setDate(dateCurrent.getDate() + day);
+  dateCurrent.setDate(dateCurrent.getDate() + (day -1));
 
   return dateCurrent;
 };
@@ -27,8 +28,9 @@ const FirstMondayoftheWeek = () => {
 /**
  * @returns Returns an array with each of the dates of the day of the week.
  */
-const calculateDays = () => {
-  let date = FirstMondayoftheWeek();
+const calculateDays = (dateEnter) => {
+
+  let date = FirstMondayoftheWeek(dateEnter);
 
   // console.log(' ⟢ ⊱⊱ ⟢ ')
   // date = date.getTime() + 86400000
@@ -52,10 +54,11 @@ if (cookiesDaysoftheWeek.length == 0) {
   // As the cookies were not found; a new cookie is created and expires every Friday.
 
   var date = new Date();
-  date.setDate(date.getDate() + 8);
-  date.setHours(14, 0, 0);
 
-  let days = calculateDays();
+    date.setDate(date.getDate() + 7);
+    date.setHours(12, 30, 0);
+
+  let days = calculateDays(date);
   document.cookie =
     "Days of the week" + "=" + days + "; expires=" + date + "; path=/";
 } else {
