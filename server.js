@@ -12,7 +12,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:'true'}))
 
-app.use('/api/usuario', userroute)
+app.use('/api', userroute)
 
 app.get('/', (req, res) => {
     res.end('welcomer to the backend server')

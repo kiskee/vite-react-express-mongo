@@ -73,7 +73,7 @@ if (cookiesDaysoftheWeek.length == 0) {
 prueba()
 
 async function prueba(){
-  let res = await axios.post("api/usuario/days");
+  let res = await axios.post("api/days");
   const data = res.data;
   console.log(data)
 

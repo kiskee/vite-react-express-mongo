@@ -9,7 +9,7 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const logi = async (credentials) => {
-    const { data } = await axios.post("/api/usuario/logi", credentials);
+    const { data } = await axios.post("/api/logi", credentials);
     return data;
   };
 

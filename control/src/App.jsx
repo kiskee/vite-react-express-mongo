@@ -5,7 +5,7 @@ import Weekdays from "./components/Weekdays"
 import Test from "./components/Test";
 
 function App() {
-  const urlWithProxy = "/api/usuario/obtenerusuarios";
+  const urlWithProxy = "/api/obtenerusuarios";
 
   const [displayLogin, setdisplayLogin] = useState("block");
   const [displayDays, setDisplayDays] = useState("none");
@@ -15,7 +15,7 @@ function App() {
       setdisplayLogin("none");
       setDisplayDays("block");
     } else {
-      console.log("No hay sesio");
+      console.log("No hay sesion");
     }
   }, []);
 

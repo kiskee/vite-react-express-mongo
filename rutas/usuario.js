@@ -117,3 +117,38 @@ router.post('/days',(req,res)=>{
         }
     })
 })
+
+router.post('/newday',(req,res)=>{
+    const newday = new daysModel({
+        date: req.body.date,
+        userList: req.body.userList
+    })
+    newday.save(function(err){
+        if(!err){
+            res.send('day was added')
+        }else{
+            res.send(err)
+        }
+    })
+})
+router.post('/updateday', (req, res) => {
+    daysModel.findOneAndUpdate({date:req.body.date}, {
+        date: req.body.date,
+        userList: req.body.userList
+    }, (err) => {
+        if(!err){
+            res.send('User Updated')
+        }else{
+            res.send(err)
+        }
+    })
+})
+router.post('/getday', (req, res) =>{
+    daysModel.find({date:req.body.date}, function(docs, err){
+        if(!err){
+            res.send(docs)
+        }else{
+            res.send(err)
+        }
+    })
+})
