@@ -3,6 +3,7 @@ import axios from "axios";
 import Login from "./components/Login";
 import Weekdays from "./components/Weekdays"
 import Test from "./components/Test";
+import {motion} from 'framer-motion'
 
 function App() {
   const urlWithProxy = "/api/obtenerusuarios";
@@ -41,9 +42,13 @@ function App() {
         <Login />
       </div>
       {/* ---------------------------- Days of the week ---------------------------- */}
-      <div className="daysOfWeek" style={{ display: displayDays }}>
+      <motion.div className="daysOfWeek" style={{ display: displayDays }}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      >
         <Weekdays/>
-      </div>
+      </motion.div>
     </div>
   );
 }

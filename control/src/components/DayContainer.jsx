@@ -9,6 +9,7 @@ const DayContainer = ({ day , number}) => {
 
 
     return (
+       
         <div className={style.card}>
             <center>
                 <h4>
@@ -20,11 +21,12 @@ const DayContainer = ({ day , number}) => {
                 
                 <div >
                     <center className={style.oval} >
-0/0
+0/54
                     </center>
                 </div>
             </div>
         </div>
+      
     );
 };
 

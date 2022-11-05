@@ -1,15 +1,15 @@
 import React from "react";
 import Logout from "./Logout";
-import DayContainer from "./DayContainer"
-import style from '../css/Day.module.css'
+import DayContainer from "./DayContainer";
+import style from "../css/Weekdays.module.css";
 import axios from "axios";
+import {motion} from 'framer-motion'
 
 /**
  * @returns Return on the first Monday of the week
  */
 
 const FirstMondayoftheWeek = (dateEnter) => {
-
   var dateCurrent = new Date(dateEnter);
 
   let daytoSubtract = dateCurrent.getUTCDay();
@@ -20,7 +20,7 @@ const FirstMondayoftheWeek = (dateEnter) => {
     day = (daytoSubtract - 1) * -1;
   }
 
-  dateCurrent.setDate(dateCurrent.getDate() + (day -1));
+  dateCurrent.setDate(dateCurrent.getDate() + (day - 1));
 
   return dateCurrent;
 };
@@ -29,7 +29,6 @@ const FirstMondayoftheWeek = (dateEnter) => {
  * @returns Returns an array with each of the dates of the day of the week.
  */
 const calculateDays = (dateEnter) => {
-
   let date = FirstMondayoftheWeek(dateEnter);
 
   // console.log(' ⟢ ⊱⊱ ⟢ ')
@@ -55,8 +54,8 @@ if (cookiesDaysoftheWeek.length == 0) {
 
   var date = new Date();
 
-    date.setDate(date.getDate() + 7);
-    date.setHours(12, 30, 0);
+  date.setDate(date.getDate() + 7);
+  date.setHours(12, 30, 0);
 
   let days = calculateDays(date);
   document.cookie =
@@ -71,29 +70,28 @@ if (cookiesDaysoftheWeek.length == 0) {
     });
 }
 
-
-async function prueba(){
+async function prueba() {
   let res = await axios.post("api/days");
   const data = res.data;
-  console.log(data)
-
+  console.log(data);
 }
-
-
 
 const Weekdays = () => {
   return (
-    <div>
-      <Logout />
-
-     {
-      day.map((element,index) => (
-        <div key={element} style={{backgroundColor:"red"}}>
-          <DayContainer day={element} number={index}/>
-        </div>
-      ))
-     }
-    </div>
+    <motion.div className={style.kiskee}
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    >
+     <div> <Logout /></div>
+      <div  >
+        {day.map((element, index) => (
+          <div key={element}>
+            <DayContainer day={element} number={index} />
+          </div>
+        ))}
+      </div>
+    </motion.div>
   );
 };
 

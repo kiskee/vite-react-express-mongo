@@ -1,3 +1,12 @@
-body{
-    background-color: #30183F;
+.logout{
+    background-color: white;
+  color: black;
+  border: 2px solid #000; /* Green */
+  transition-duration: 0.4s;
+}
+
+.logout:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #000; /* Green */
+  color: white;
 }

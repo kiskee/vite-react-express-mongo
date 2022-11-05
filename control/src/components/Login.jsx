@@ -3,6 +3,7 @@ import axios from "axios";
 import md5 from "md5";
 import login from "../css/Login.module.css";
 import Swal from "sweetalert2";
+import {motion} from 'framer-motion'
 
 function Login() {
   //Hooks
@@ -95,7 +96,11 @@ function Login() {
           ></path>
         </svg>
       </div>
-      <div className={login.mainWrap}>
+      <motion.div className={login.mainWrap}
+       initial={{ opacity: 0, scale: 0.5 }}
+       animate={{ opacity: 1, scale: 1 }}
+       transition={{ duration: 0.5 }}
+      >
         <div className={login.sasTitle}>SAS Login</div>
 
         <div className={login.sasInputHolder}>
@@ -145,7 +150,7 @@ function Login() {
                 <a className={login.sasLink} >Resend Activation Link</a>
             </div>  
         </div>
-      </div>
+      </motion.div>
       
       <footer>
             <div className={login.footerInfo}>
