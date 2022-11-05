@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import md5 from "md5";
 import login from "../css/Login.module.css";
+import Swal from "sweetalert2";
 
 function Login() {
   //Hooks
@@ -14,6 +15,7 @@ function Login() {
   };
 
   const logini = async (event) => {
+    event.preventDefault
     try {
       const useri = await logi({
         useremail,
@@ -21,9 +23,20 @@ function Login() {
       if (useri[0].password === md5(password)) {
         window.sessionStorage.setItem("Logged",useremail);
         window.location.reload();
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Password dont match'
+        })
+        
       }
     } catch (e) {
-      console.log(e);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'User dont match'
+      })
     }
   };
 

@@ -19,8 +19,10 @@ function App() {
     }
   }, []);
 
-  console.log(displayLogin);
+  //console.log(displayLogin);
 
+
+  /*
   function getDataFromServer() {
     axios
       .get(urlWithProxy)
@@ -29,8 +31,7 @@ function App() {
         console.error(err);
       });
   }
-
-  getDataFromServer();
+*/
 
   return (
     <div>

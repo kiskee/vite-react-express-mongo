@@ -70,7 +70,7 @@ if (cookiesDaysoftheWeek.length == 0) {
       day.push(new Date(temp).toLocaleDateString());
     });
 }
-prueba()
+
 
 async function prueba(){
   let res = await axios.post("api/days");
